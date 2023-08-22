@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Aplication.Client.API</name>
+    </assembly>
+    <members>
+        <member name="M:Aplication.Client.API.Controllers.ClientController.RegisterNewGymClient(Aplication.Client.API.DTO.CustomerRegister)">
+            <summary>
+            Registro de un nuevo cliente
+            </summary>
+            <returns>Id del cliente</returns>
+            <response code="200">El recurso se creó y ademas retornará el Id del cliente</response>
+            <response code="400">Faltó algún dato en el request body.</response>
+            <response code="500">Ha ocurrido un error durante la creación.</response>
+        </member>
+        <member name="M:Aplication.Client.API.Controllers.ClientController.GetCustomer(System.Int32)">
+            <summary>
+            Obtener cliente por su ID
+            </summary>
+            <param name=""></param>
+            <returns>Toda la informacion del cliente</returns>
+        </member>
+        <member name="M:Aplication.Client.API.Controllers.ClientController.SaveImage(Aplication.Client.API.DTO.IdentificationImageData)">
+            <summary>
+            Guardar imagen del cliente en el server
+            </summary>
+            <returns>Path Image</returns>
+            <response code="200">El recurso se creó y ademas retornará el PathImage</response>
+            <response code="500">Ha ocurrido un error durante la creación.</response>
+        </member>
+        <member name="M:Aplication.Client.API.Controllers.ClientController.GetImageBase64(Aplication.Client.API.DTO.PathImageInformation)">
+            <summary>
+            Obtiene imagen del cliente en base 64
+            </summary>
+            <returns>Base 64 Image String</returns>
+            <response code="200"> Retorna el base 64 de la imagen del cliente</response>
+            <response code="500">Ha ocurrido un error a la hora de obtener la imagen.</response>
+        </member>
+        <member name="M:Aplication.Client.API.Controllers.ClientController.RegisterNewGymTutor(Aplication.Client.API.DTO.TutorRegister)">
+            <summary>
+            Registro del tutor de el cliente
+            </summary>
+            <returns>Id del tutor</returns>
+            <response code="200">El recurso se creó y ademas retornará el Id del tutor</response>
+            <response code="400">Faltó algún dato en el request body.</response>
+            <response code="500">Ha ocurrido un error durante la creación.</response>
+        </member>
+        <member name="M:Aplication.Client.API.Controllers.ClientController.GetKinshipsData">
+            <summary>
+            Obtener catálogo de los tipos de Relación Cliente-Tutor
+            </summary>
+            <param name=""></param>
+            <returns>Arreglo de objetos con las propiedades Id y ProductName</returns>
+        </member>
+        <member name="M:Aplication.Client.API.Controllers.ClientController.GetAddress(System.Int32)">
+            <summary>
+            Obtener direccion por el idAddres del cliente
+            </summary>
+            <param name=""></param>
+            <returns>La direccion del cliente</returns>
+        </member>
+        <member name="M:Aplication.Client.API.Controllers.ClientController.UpdateDataCustomer(Aplication.Client.API.DTO.CustomerUpdate)">
+            <summary>
+            Actualizar datos del cliente
+            </summary>
+            <returns>Id del cliente actualizado</returns>
+            <response code="200">El recurso se creó y ademas retornará el Id del cliente actualizado</response>
+            <response code="400">Faltó algún dato en el request body.</response>
+            <response code="500">Ha ocurrido un error durante la creación.</response>
+        </member>
+        <member name="M:Aplication.Client.API.Controllers.ClientController.UpdateDataAddress(Aplication.Client.API.Models.Address)">
+            <summary>
+            Actualizar datos de la direccion
+            </summary>
+            <returns>Id del cliente actualizado</returns>
+            <response code="200">El recurso se creó y ademas retornará el Id del cliente actualizado</response>
+            <response code="400">Faltó algún dato en el request body.</response>
+            <response code="500">Ha ocurrido un error durante la creación.</response>
+        </member>
+        <member name="M:Aplication.Client.API.Controllers.ClientController.GetIfEmailExist(System.String)">
+            <summary>
+            Verifica si el email que se intenta registrar existe previamente
+            </summary>
+            <param name=""></param>
+            <returns>Objeto con campo EmailExist</returns>
+        </member>
+        <member name="M:Aplication.Client.API.Controllers.MembershipController.SuscriptionToExpire(System.DateTime,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Obtención de Membresias a Vencer
+            </summary>
+            <param name=""></param>
+            <returns>Obtención de Membresias a Vencer</returns>
+        </member>
+        <member name="M:Aplication.Client.API.Controllers.MembershipController.GetSuscriptionToNameUser(System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Obtención de Membresias mediante el nombre de un usuario
+            </summary>
+            <param name=""></param>
+            <returns>Obtención de Membresias mediante el nombre de un usuario</returns>
+        </member>
+        <member name="M:Aplication.Client.API.Controllers.PoliticsController.GetPoliticsGymnasium">
+            <summary>
+            Obtener politicas 
+            </summary>
+            <param name=""></param>
+            <returns>Un objeto con las propiedades idPolitics, description y terminos y condiciones</returns>
+        </member>
+        <member name="M:Aplication.Client.API.Controllers.PoliticsController.SavePoliticsAccepted(Aplication.Client.API.DTO.CustomerPoliticsSave)">
+            <summary>
+            Guardar politicas aceptadas
+            </summary>
+            <returns></returns>
+            <response code="200">El recurso se creó</response>
+            <response code="400">Faltó algún dato en el request body.</response>
+            <response code="500">Ha ocurrido un error durante la creación.</response>
+        </member>
+        <member name="M:Aplication.Client.API.Controllers.ProductsController.GetCatalogProducts">
+            <summary>
+            Obtener catálogo de productos
+            </summary>
+            <param name=""></param>
+            <returns>Arreglo de objetos con las propiedades Id y ProductName</returns>
+        </member>
+        <member name="M:Aplication.Client.API.Controllers.ProductsController.RegisterIncomeProduct(Aplication.Client.API.DTO.ProductSale)">
+            <summary>
+            Registrar entrada por producto
+            </summary>
+            <param name=""></param>
+            <returns></returns>
+        </member>
+        <member name="M:Aplication.Client.API.Controllers.TestController.SaveAnswerTest(Aplication.Client.API.DTO.CustomerAnswerTestRegister)">
+            <summary>
+            Guardar las respuestas del cliente del test de salud
+            </summary>
+            <returns>Id del test</returns>
+            <response code="200">El recurso o los recursos se crearon</response>
+            <response code="400">Faltó algún dato en el request body.</response>
+            <response code="500">Ha ocurrido un error durante la creación.</response>
+        </member>
+        <member name="M:Aplication.Client.API.Controllers.TestController.GetAnswerTestHealth">
+            <summary>
+            Obtener las Respuestas del Test
+            </summary>
+            <param name=""></param>
+            <returns>Lista de las respuestas del Test de salud</returns>
+        </member>
+        <member name="M:Aplication.Client.API.Controllers.TrainingShiftController.GetTrainingShifts">
+            <summary>
+            Obtener catálogo de turnos
+            </summary>
+            <param name=""></param>
+            <returns>Arreglo de objetos con las propiedades Id y Description</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "EUGpVbKX5gYW8zW9y3oLJ234wwuLOfG4ve/N+ejqvBo=",
+  "Source": "Aplication.Client.API",
+  "BasePath": "_content/Aplication.Client.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
